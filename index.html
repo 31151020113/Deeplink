@@ -6,7 +6,15 @@
     <title>Document</title>
   </head>
   <body>
-    <a href="taskkap://vendor/booking/71">Click me!</a>
+    <input type="text" id="input-deep-link"></input>
+    <a href="ziisty://vendor/booking/71" id="link">Click me!</a>
+    <button id="submit" onclick="submit()">Submit</button>
     <br />
   </body>
+  <script>
+    function submit() {
+      var id = document.getElementById('input-deep-link').value;
+      document.getElementById("link").setAttribute('href', 'ziisty://vendor/booking/'+id);
+    }
+  </script>
 </html>
